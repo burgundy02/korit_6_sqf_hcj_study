@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>표</title>
-
+    <title>Document</title>
     <style>
         table {
             border-collapse: collapse;
@@ -19,46 +18,31 @@
             height: 50px;
         }
     </style>
-    
+
 </head>
 <body>
+    <!-- 모든 열은 제일 긴 행의 갯수를 따라간다 -->
+    <!-- 내가 td를 5개 만들었기 때문에 합친 것 까지 포함하면 늘어서 한 개 삭제  -->
     <table>
         <tr>
+            <td colspan="2"></td>
             <td></td>
-            <!-- 행(row) 끼리 합치기 -->
-            <td rowspan="3"></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
             <td></td>
-            <td rowspan="7"></td>
-            <td></td>
+            <td rowspan="2"></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td></td>
             <td></td>
-            <!-- 열(column) 끼리 합치기 -->
-            <td colspan="3"></td>
+            <td colspan="2"></td>
         </tr>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td colspan="3"></td>
-            <td colspan="3"></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td rowspan="3"></td>
-        </tr>
-        <tr>
-            <td colspan="3"></td>
+            <td colspan="2"></td>
             <td></td>
             <td></td>
         </tr>

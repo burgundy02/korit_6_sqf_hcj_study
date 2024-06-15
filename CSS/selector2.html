@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main h1 {
+            color: red;
+        }
+
+        div .title {
+            color: blue;
+        }
+
+        /* div안에 들어있는 자식 클래스에서만 실행시켜라 */
+        div > .title {
+            color: blue;
+        }
+
+        div > div > .title {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>제목</h1>
+        <div>
+            <h1>제목2</h1>
+        <div>
+    </main>
+    <div class="title"><div>
+        <div class="title"></div>
+    </div>>
+        <div class="title">
+            <div class=""></div>
+    </div>
+</body>
+</html>

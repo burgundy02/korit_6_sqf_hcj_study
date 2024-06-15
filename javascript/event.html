@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this는 객체 중괄호안에 key, value-->
+    <button onclick="handleButtonClick(event);">확인</button>
+    <!-- 이벤트라는 함수를 호출해라, onkeydown키보드가 눌러졌을 때 이벤트가 동작을 한다, 누르고 있으면 계속 a가 뜨고있다, onkeyup 키보드를 땠을 때 뜬다. onkeypress-->
+    <input 
+    type="text" 
+    onkeydown="handleInputChange(event);"
+    onfocus="handleInputFocus(event);"
+    onblur="handleInputBlur(event);"
+    >
+   
+    <script src="event.js"></script>
+
+</body>
+</html>

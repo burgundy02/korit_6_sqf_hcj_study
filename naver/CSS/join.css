@@ -1,0 +1,339 @@
+.inner {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* 마진의 오토는 가운데 정렬 */
+    margin: 0px auto;
+    width: 500px;
+    height: 100%;
+    color: #fafafa;
+} /* 보라색 점선 flex */
+    
+    
+    /* 클래스명은 하이픈,  언더바안씀 */
+    .logo-naver {
+        /* 플렉스 그로우 0 */
+        padding: 16px 115px 16px 20px;
+    }
+
+    .logo-naver .link::before {
+        /* 이미지 안에 네이버 로고 넣기 */
+        display: block;
+        /* 필수 */
+        content: "";
+        background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_48b1e603.png);
+        background-size: 372px 326px;
+        background-position: 0 -244px;
+        background-repeat: no-repeat;
+        width: 94px;
+        height: 18px;
+    }
+
+    .content {
+        /* 플렉스 안에서 남은 여백을 자동으로 채워준다. */
+        flex-grow: 1;
+        /* flex-shrink: 넘치는 영역 줄일 째; */
+        display: flex;
+        flex-direction: column;
+        /* 위 아래로 나뉜다 */
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .form-content {
+        flex-grow: 1;
+        padding: 0 20px;
+    }
+
+    .button-submit-wrap {
+        padding: 20px;
+    }
+
+    .button-submit {
+        width: 100%;
+        padding: 14px 0;
+        border-radius: 6px;
+        border: 1px solid rgba(0, 0, 0, .05);
+        background: #09aa5c;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        color: #fff;
+    }
+
+    .join-toggle {
+        margin-top: -8px;
+        text-align: right;
+    }
+
+    .join-toggle input {
+        display: none;
+    }
+
+    .join-togle label {
+        display: inline-block;
+        position: relative;
+        padding-right: 23px;
+        font-size: 13px;
+        letter-spacing: -0.4px;
+        color: #929294;
+        cursor: pointer;
+    }
+
+    .join-toggle label::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 20px;
+        height: 20px;
+        background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_48b1e603.png);
+        background-size: 372px 326px;
+        background-position: -342px -248px;
+        background-repeat: no-repeat;
+    }
+
+    .join-toggle input:checked + label::after {
+        background-position: -342px -270px;
+    }
+
+    .form-list {
+        position: relative;
+        margin: 10px 0;
+        border-radius: 6px;
+    }
+
+    .form-item {
+        position: relative;
+        /* 서로 간격, 여백을 주는 역할 */
+        margin-top: -1px;
+    }
+
+    .form-item > input[type=] {
+        display: none;
+    }
+
+  
+    .form-input {
+        position: relative;
+        box-sizing: border-box;
+        outline: none;
+        border: 1px solid #c6c6c6;
+        border-bottom: none;
+        padding: 0 10px 0 45px;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+
+    .form-input::-webkit-input-placeholder {
+        font-size: 15px;
+        color: #929294;
+    }
+
+    .form-input:focus {
+        border: 2px solid #09aa5c;
+        /* 포지션 쓸 때 쓸 수 있다. z인덱스 z축의 순서, 무조건 제일 위: 999 / 무조건 제일 아래: -999*/
+        z-index: 10;
+
+    }
+
+    .form-select {
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-sizing: border-box;
+        outline: none;
+        padding: 0 10px 0 45px;
+        border: 1px solid #c6c6c6;
+        border-bottom: none;
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+        background-color: white;
+        font-size: 15px;
+        color: #929294;
+        cursor: pointer;
+    }
+
+    .adult-group > label {
+        display: block;
+        box-sizing: border-box;
+        padding: 6px 0;
+        width: 107.75px;
+        border: 1px solid #c6c6c6;
+        text-align: center;
+        font-size: 13px;
+        color: #929294;
+        cursor: pointer;
+    }
+
+    .adult-group > input[type="radio"]:checked + label {
+        border: 1px solid #09aa5c;
+        color: #09aa5c;
+        z-index: 11px;
+    }
+
+    .adult-group > label:nth-last-of-type(1) {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .adult-group > label:nth-last-of-type(1) {
+        margin: -1px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+
+    .no-caret {
+        caret-color: transparent;
+    }
+
+    .form-select::after {
+        content: "";
+        display: block;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 17px;
+        width: 16px;
+        height: 17px;
+        
+        /* 백그라운드 */
+        -96, 244
+    }
+
+    .form-select:focus + .select-icon {
+        transform: translate(-50%) rotate(180%);
+    } 
+
+    .telecom-item > input[type="checkboc"]:checked + lable {
+        border: 2px solid #09aa5c;
+        z-index: 10;
+    }
+    
+    .form-adult {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1px solid #c6c6c6;
+        padding: 0 10px;
+        height: 50px;
+        background-color: white;
+    }
+    
+    .form-list > .form-item:nth-of-type(1) .form-input {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    .form-list > .form-item:nth-of-type(1) .form-input {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+
+    .user {
+        padding-right: 91px;
+    }
+    
+/* 포지션만 뺴기 
+z-index 11*/
+    .form-item::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 9px;
+    display: block;
+
+    }
+
+    .user-item {
+        background-position: 
+    }
+
+    .telecom-list {
+        display: none;
+        position: absolute;
+        left: 40px;
+        top: 80%;
+        z-index: 12;
+        border-radius: 6px;
+        border: 1px hidden #c6c6c6;
+        border-collapse: collapse;
+        background-color: white;
+        /* 번짐 없다 1px */
+        box-shadow: opx opx 1px #767678;
+        cursor: pointer;
+        /* 넘치는 부분을 숨기겠다 */
+        overflow: hidden;
+    }
+
+    .form-select:focus ~ .telecom-list {
+        display: table;
+    }
+
+    .telecom-list td {
+        box-sizing: border-box;
+        border: 1px solid #c6c6c6;
+        padding: 11px 8px;
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .user-item::before {
+        position: absolute;
+        content: "@naver.com";
+        transform: translateY(-50%);
+        z-index: 11;
+        top: 50%;
+        right: 14px;
+        color: #767678;
+        font-size: 15px;
+    }
+
+/* 백그라운드 이미지사이즈 들고오기 */
+/* 변수나 함수처럼 잘 만들면 된다 */
+
+    .user-password::before {
+        position: absolute;
+        content: "";
+        transform: translateY(-50%);
+        z-index: 11;
+        top: 50%;
+        right: 14px;
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+
+
+.password-item::after {
+
+}
+
+.email-item::after {
+    background-position: -96, -296;
+}
+
+.name-item::after {
+    background: -342, 64;
+}
+
+.birthday-item::after {
+   background-position: -192, -296;
+
+}  
+.telecom-item::after {
+    background-position: -224, -296;
+}
+
+.phone-item::after {
+    background-position: -310, -128;
+}
+
+
+
+

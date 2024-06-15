@@ -1,0 +1,22 @@
+
+/* 초기 세팅은 여기에 */
+html, body {
+    height: 100%;
+}
+
+/* 패딩과 마진 가지고 있는 얘들 리셋하기 */
+body, h1, ul, ol, button {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 모든 버튼에 커서 포인트를 둠 */
+button {
+    cursor: pointer;
+}
+
