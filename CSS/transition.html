@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
+        /* transiton-property
+        all: all값을 사용하거나 transiton-property을 생략할 경우 요소의 모든 속성이 트랜지션 대상이 됨.기본값임
+        none: 트랜지션을 하는 동안 아무 속성도 바뀌지 않음
+        속성이름: 예) transiton-property: background-color - 해당 요소의 배경색에 트랜지션 적용*/
+        /*
+
+        transition-timing-function
+        ease: 처음에는 천천히 시작하고 점점 빨라지다가 마지막엔 천천히 끝낸다. 기본값
+        linear: 시작부터 끝까지 똑같은 속도로 진행
+        ease-in: 느리게 시작
+        ease-out: 느리게 끝냄
+        ease-in-out: 느리게 시작하고 느리게 끝냄 
+        cubic-bezier(n, n, n, n)*/
         .box {
             transition: all 0.5s ease;
-            position: absolute;
+            position:absolute;
             left: 100px;
             top: 100px;
             box-sizing: border-box;
@@ -25,22 +37,20 @@
             top: 300px;
         }
     </style>
-
 </head>
 <body>
     <div class="box"></div>
     <button class="move-button">이동</button>
     <script>
         const box = document.querySelector(".box");
-        const moveButton = document.querySelector(".move-button");
-        moveButton.onclik = () => {
-            // contains => 포함하고있니?
+        const movebutton = document.querySelector(".move-button");
+        movebutton.onclick = () => {
             if(box.classList.contains("left300")) {
                 box.classList.remove("left300");
                 setTimeout(() => {
                     box.classList.remove("top300");
-                    }, 200);
-                    return;
+                }, 200);
+                return;
             }
             box.classList.add("left300");
             setTimeout(() => {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .danmuji {
+            box-sizing: border-box;
+            /* 마진 /보더:boder-radius / 패딩 / 컨텐츠 */
+            /* 지름이 60px인 원을 만들어서 원테두리 만큼 깎는다. */
+            border-radius: 60px;
+            width: 50px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .danmuji2 {
+            box-sizing: border-box;
+            /* 넓비, 높이, 레이더스 다 같으면 원 됨 */
+            border-radius: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+
+        .danmuji3 {
+            box-sizing: border-box;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            width: 100px;
+            height: 200px;
+            background-color: rgb(144, 144, 83);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="danmuji"></div>
+    <div class="danmuji2"></div>
+    <div class="danmuji3"></div>
+</body>
+</html>

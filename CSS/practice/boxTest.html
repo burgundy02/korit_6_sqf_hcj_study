@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big {
+            /* 박스사이징 보더박스 하면 너비, 높이가 보더의 너비, 높이가 된다. -> 디비전 크기를 설정할 수 있다. */
+            box-sizing: border-box;
+            margin: 30px;
+            /* 선 크기 / solid: 실선 */
+            border: 1px solid brown;
+            /* 패딩을 키우면 컨텐츠가 작아짐(우리가 border길이만큼 정해 놓았기 때문에 컨텐츠가 점점 모인다.) */
+            padding: 5px;
+            width: 100px;
+            height: 200px;
+            background-color: rgb(51, 16, 16);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="big">빅빅</div>
+</body>
+</html>

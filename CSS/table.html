@@ -7,6 +7,7 @@
     <style>
         table {
             border: 1px solid #dbdbdb;
+            /* 이거를 안하면 보더가 두 줄이 된다. / 이거를 안하면 바둑돌 만들 때 징그럽게 작은 네모들이 안에 있음*/
             border-collapse: collapse;
         }
 
@@ -48,9 +49,12 @@
     </style>
 </head>
 <body>
+    <!-- 표 -->
     <table>
         <thead>
+            <!-- table row (행) -->
             <tr>
+                <!-- 글씨 진함, 가운데 정렬 -->
                 <th class="number">번호</th>
                 <th class="name">이름</th>
                 <th class="age">나이</th>
@@ -58,18 +62,19 @@
         </thead>
         <tbody>
             <tr>
+                <!-- 글씨 연함, 왼쪽 부터 / 한 칸이라고 생각하면 됨-->
                 <td class="number">1</td>
-                <td class="name">손경태</td>
+                <td class="name">김지현1</td>
                 <td class="age">29</td>
             </tr>
             <tr>
                 <td class="number bg-red">2</td>
-                <td class="name tc-red td-line">신선애</td>
+                <td class="name tc-red td-line">김지현2</td>
                 <td class="age">25</td>
             </tr>
             <tr>
                 <td class="number">3</td>
-                <td class="name">최단비</td>
+                <td class="name">김지현3</td>
                 <td class="age">29</td>
             </tr>
         </tbody>

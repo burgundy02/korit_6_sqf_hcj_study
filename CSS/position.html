@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- block : 한 줄 모두 차지 (대표 element - <div>, <p> )
+    inline : 콘텐츠 크기 만큼만 차지 (대표 element - <span>) -->
     <style>
         .box1 {
             /* 부모에 포지션을 줘야 자식이 부모 안에서 움직인다. relative or absolute 상관x*/
+            /* relative: 요소 자기자신을 기준으로 배치 / absolute: 부모(조상)요소를 기준으로 배치*/
             position: relative;
             box-sizing: border-box;
             width: 500px;
@@ -21,6 +24,8 @@
         }
 
         .box3 {
+            /* absolute해야 부모 안에서 논다 / 오른쪽으로 0px 만큼 거리를 띄운다 -> 제일 오른쪽에 붙어 있음(몇 px 만큼 거리를 띄울지 설정) */
+            /* 부모가 포지션이 없으면 absolute하면 자기 마음대로 논다. 부모 안에서 "움직이게 " 하려면 부모에 포지션을 줘야 한디*/ 
             position: absolute;
             right: 0px;
             width: 100px;

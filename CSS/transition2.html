@@ -23,16 +23,16 @@
             width: 100px;
             height: 100px;
         }
-
-        .box:active > .box2 {
+         /*박스의 자식 박스2에 마우스를 올려놓기만 해도 적용 */
+        .box:hover > .box2 {
             top: 100px;
             left: 100px;
         }
     </style>
-
 </head>
 <body>
-    <div class="box"></div>
-    <div class="box2"></div>
+    <div class="box">
+        <div class="box2"></div>
+    </div>
 </body>
 </html>

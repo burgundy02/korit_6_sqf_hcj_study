@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 인라인 요소 : 옆으로 붙음, 자기 것만 차지해서 옆에 공간에 붙을 수 있게 함 / 블록 요소: 한 줄을 다 차지함 -->
     <style>
+        /* h1은 기본이 블록요소인데 인라인 요소로 바꿔서 옆에 붙을 수 있게 함 */
         h1 {
             display: inline;
         }
 
-        
         div {
             width: 100px;
             background-color: yellow;
@@ -17,9 +18,12 @@
     </style>
 </head>
 <body>
+    <!-- h1: 블록요소 -->
     <h1>제목</h1>
+    <!-- span: 인라인요소 -->
     <span>제목</span>
     <span>제목</span>
+    <!-- div: 블록요소라서 무조건 한 줄 다 차지해야 함 그래서 위에 스판이라도 얘는 밑에 붙음 -->
     <div>제목</div>
     <div>제목</div>
 </body>

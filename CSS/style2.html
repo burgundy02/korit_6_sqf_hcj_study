@@ -11,7 +11,6 @@
             border: 1px solid black;
         }
 
-        
         /* class */
         .box {
             background-color: green;
@@ -21,7 +20,7 @@
             background-color: purple;
         }
 
-        /* id */
+        /* id: id가 우선사항, class에 덮어 씌울 수 있음*/
         #box1 {
             background-color: blue;
         }
@@ -38,9 +37,16 @@
     </style>
 </head>
 <body>
+    <!-- 한 개의 디비전만 꾸미고 싶을 때 각각의 디비전에 class나 id 속성을 부여해서 그 것만 꾸밀 수 있게 한다. -->
+    <!-- 우선사항: id, id가 적용된다. -->
     <div class="box" id="box1"></div>
+
+    <!-- 한 태그에 클래스 여러 개 줄 수 있다. / 클래스명 -으로만 -->
     <div class="box box2"></div>
+
     <div id="box3"></div>
+
+    <!-- 그냥 글쓰는 거 -->
     <p class="text-box"></p>
     <h1></h1>
 </body>

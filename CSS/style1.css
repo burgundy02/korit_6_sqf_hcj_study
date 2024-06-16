@@ -1,5 +1,10 @@
+/* 실무에서는 css, html 따로 분리해서 사용 */
+/* header를 이렇게 꾸미겠다. */
 header {
+    /* 너비 */
     width: 100px;
+    /* 높이 */
     height: 100px;
+    /* 테두리, 라인 / 1px : 보더의 굵기가 1px / solid: 실선 / green: boder의 색깔*/
     border: 1px solid green;
 }

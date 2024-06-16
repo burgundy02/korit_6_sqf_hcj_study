@@ -6,23 +6,25 @@
     <title>Document</title>
 
     <style>
-        or-box {
+        .or-box {
             width: 300px;
         }
-
+        
+        /* 앞 뒤에 가상의 요소가 생김 */
         .or::before,
         .or::after {
             display: inline-block;
+            /* 비포, 애프터 쓰면 가상의 요소가 생겨서 컨텐츠를 반드시 작성해야함(지금은 없어서 비움) */
             content: "";
             box-sizing: border-box;
-            /* 위,아래 좌우 */
             margin: 0px 5px;
+            /* 마진의 밑 부분 적용 */
             margin-bottom: 5px;
-            border-top: 1px solid #dbdbbd;
+            /* 보더의 탑 부분 적용 */
+            border-top: 1px solid #dbdbdb;
             width: 100px;
         }
     </style>
-
 </head>
 <body>
     <div class="or-box">

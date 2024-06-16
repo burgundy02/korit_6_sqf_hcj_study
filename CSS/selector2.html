@@ -5,36 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        main h1 {
+         /* > 자식만 적용 (손자는 x) */
+        main > h1 {
             color: red;
         }
 
-        div .title {
-            color: blue;
-        }
-
-        /* div안에 들어있는 자식 클래스에서만 실행시켜라 */
+       /* 디비전의 자식 title클래스에만 적용 */
         div > .title {
             color: blue;
         }
-
-        div > div > .title {
+ 
+        /* 디비전의 디비전의 자식 title2 클래스에만 적용 / 제목5에만 적용*/
+        div div > .title2 {
             color: green;
         }
     </style>
 </head>
 <body>
     <main>
-        <h1>제목</h1>
+        <!-- main의 자식 -->
+        <h1>제목1</h1>
         <div>
+             <!-- main의 손자 -->
             <h1>제목2</h1>
-        <div>
+        </div>
     </main>
-    <div class="title"><div>
-        <div class="title"></div>
-    </div>>
-        <div class="title">
-            <div class=""></div>
+    <div>
+        <!-- 디비전의 자식 title클래스에만 적용  -->
+        <div class="title">제목3</div>
+
+        <div>
+            <!-- 디비전의 자식 title클래스에만 적용 -->
+            <div class="title">제목4</div>
+
+            <div class="title2">제목5</div>
+        </div>
     </div>
 </body>
 </html>
