@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         table {
-            boder: 1px solid #dbdbdb;
+            border: 1px solid #dbdbdb;
             border-collapse: collapse;
         }
 
@@ -16,20 +16,17 @@
             height: 40px;
         }
     </style>
-
 </head>
 <body>
     <div>
-        <input
-         type="text" class="username-input" 
+        <input type="text" class="username-input" 
         name="username" placeholder="username"
-        onkeydown="andleUserInputKeyDown(event)"
+        onkeydown="handleUserInputKeyDown(event)"
         >
-        <input
-         type="text" class="password-input"
-         name="password" placeholder="password"
-         onkeydown="andleUserInputKeyDown(event)"
-         >
+        <input type="text" class="password-input" 
+        name="password" placeholder="password"
+        onkeydown="handleUserInputKeyDown(event)"
+        >
     </div>
     <table>
         <thead>
@@ -40,6 +37,7 @@
             </tr>
         </thead>
         <tbody class="user-table-body">
+
         </tbody>
     </table>
     <script src="user_management.js"></script>

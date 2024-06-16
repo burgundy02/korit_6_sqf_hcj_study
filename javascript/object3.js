@@ -1,7 +1,8 @@
 function modifyUser(user, target, value) {
     const newUser = {
-        ...user,    // 객체 안의 값이 복사됨
-        [target]: value   // 타겟안의 값을 키 값으로 쓰겠다. value는 그대로 들어옴  / 대괄호를 안치면 변수랑 전혀 상관없는 새로운 키 값이 들어온다. / 대괄호를 쳐야 변수 안의 값을 키값으로 받는다. 대괄호를 쳐야 [terget]에 username이 들어옴
+        ...user, // 스프레드. user 객체의 키,밸류 값들이 그대로 복사됨
+        // 객체의 값을 덮어씀
+        [target]: value // = ["username"]: value. []를 뺴고 target: value 라고 하면 target이라는 키가 새로 생기게됨
     };
     return newUser;
 }
@@ -12,24 +13,34 @@ function main() {
         password: "1234"
     }
 
-    // delete user.password; 삭제 방법
+    delete user.password; // user의 password를 삭제
 
+    // 함수안의 함수는 호출이 안되지만 객체는 됨 / 만약 함수 main을 호출하면 리턴값이 없어서 아무것도 출력 안됨
     console.log(user);
 
-    const newUser = modifyUser(user, "username", "test-user");  // key값 username
-    console.log(newUser);   // 객체의 값 수정 방법
+    const newUser = modifyUser(user, "username", "test-user");
+    console.log(newUser);
 
     const newUser2 = modifyUser(newUser, "password", "1111");
     console.log(newUser2);
 
-    const userList = [user, newUser];   // 100번 주소
-    const newUserList = [...userList, newUser2];  // 배열안에 있는 거 옮기기 배열 자체가 아닌 배열 안의 요소만 옮김  //200번 주소 
-                     // 그대로 카피해서, 새로운 값 추가  
+    const userList = [ user, newUser ];
+    console.log(userList)
+    const newUserList = [ ...userList, newUser2 ]; // userList 안에 있는 요소들을 복사, newUser2추가. 기존의 userList와 주소가 다른 새로운 배열.
+    console.log(newUserList);
 
-    // 스프레드 -> 깊은 복사(안에 들어 있는 것들만 옮기는 것)
+    // 스프레드 -> 깊은 복사 (안의 요소(값)들만 복사)
 
-    // 얕은 복사(배열 주소 복사하기 똑같은 100번) 
-    const userList2 = userList; 
+    const userList2 = userList; // 얕은 복사 // userList와 userList2의 주소가 같음.
+
+    // 비구조 할당
+    const [ a, b, c ] = newUserList;
+
+    // const { username, password } = a;
+    // console.log(username); // admin
+    // =
+    const { username, password } = newUserList[0];
+    console.log(username); // admin
 }
 
 main();

@@ -1,9 +1,6 @@
 const USERNAME = "admin";
 const PASSWORD = "1234";
 
-
-
-
 function login(username, password) {
     if(USERNAME === username && PASSWORD === password) {
         console.log("로그인 성공");
@@ -15,7 +12,7 @@ function login(username, password) {
 // 변수에 함수를 넣으면 함수의 주소가 들어간다.
 const login2 = login;
 
-login2("admin", 1234);
+login2("admin", "1234");
 
 // 함수 자체를 통채로 넣을 수 있다.
 const add2 = function add(x, y) {
@@ -27,13 +24,14 @@ console.log(add2(10, 20));
 const sub2 = function (x, y) {
     return x - y;
 }
-
 console.log(sub2(20, 10));
 
 // 화살표 함수(람다)
+// !를 붙이면 boolean으로 바꿔준다. 언디파인은 false
 let div = (x, y) => {
     return !x || !y ? 0 : x / y;
 }
+// boolean으로 바꿨지만 not을 붙였기 때문에 false가 된다.
 console.log(div(10, 2));     // 결과는 5
 
 // 화살표 함수(명령이 한 줄인 경우)
@@ -54,7 +52,7 @@ function main() {
     test();
 }
 main();
-// test();   // main안에서 정의 돼서 여기서는 호출 안됨
+// test();   // test라는 함수가 main안에서 정의 돼서 밖에서는 test함수 호출 안됨
 
 
 

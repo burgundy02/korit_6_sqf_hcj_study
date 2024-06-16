@@ -1,35 +1,32 @@
-// 비구조 할당, 구조 분해  *중요
+// 비구조 할당, 구조 분해
 function main() {
     const user = {
-        username: "admin",
+        username: 'admin',
         password: "1234",
-        name: "김지현",
+        name: "김해민",
         email: "aaa@gmail.com"
     }
 
-    const names = ["김지현", "김지현1", "김지현2", "김지현3"];
+    const names = [ "박현주", "이성희", "권오광", "권혁진" ];
 
-    // user객체안의 값을 분해 해서 중괄호에 넣는다.
-    const {username, password, email} = user;
-    console.log(username);
-    console.log(password);
-    console.log(email);
+    // user 객체에서 3가지 키를 들고옴
+    const { username, password, email } = user;
+    console.log(username); // admin
+    console.log(password); // 1234
+    console.log(email); // aaa@gmail.com
 
+    // names 배열의 0번 인덱스부터 들고옴
+    const [ a, b ] = names;
+    console.log(a); // 박현주
+    console.log(b); // 이성희
 
-    // 각각 0, 1 인덱스 들고오기
-    // 인덱스 순서대로 들어옴
-    const [a, b] = names;
-    console.log(a);
-    console.log(b);
+    // user 객체에서 name을 제외한 나머지 값들을 들고옴
+    const { name, ...newUser } = user;
+    console.log(newUser); // { username: 'admin', password: '1234', email: 'aaa@gmail.com' }
+    console.log(name); // 김해민
 
-    // ps.주로 const를 쓴다.
-
-    // rest
-    // ...newUser 스프레드: name을 제외한 남은 얘들을 복사해서 들고온다 / delete대신 쓸 수 있다.
-    const {name, ...newUser} = user;
-    console.log(newUser);
-
-    console.log(names.slice(1,3));  // 1부터 3전까지 인덱스 
+    // names 배열에서 1번 인덱스부터 3번 인덱스 전까지 들고옴
+    console.log(names.slice(1, 3)); // [ '이성희', '권오광' ]
 }
 
-main()
+main();

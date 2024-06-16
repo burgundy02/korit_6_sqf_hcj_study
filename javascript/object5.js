@@ -12,7 +12,8 @@ function printUser(user) {
 }
 
 // 비구조할당 할 것인지
-// 중괄호안에 username: "admin", 얘네 값 들어가는 거임
+// 중괄호안에 username: "admin"(key, value), 얘네 값 들어가는 거임
+// 중괄호안에 user의 내용들을 넣어서 user를 비구조 할당함
 function printUser2({username, password, name, email}) {
 
     console.log(`사용자이름: ${username}`);

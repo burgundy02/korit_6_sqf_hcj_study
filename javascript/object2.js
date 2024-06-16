@@ -6,7 +6,7 @@ function createUser(username, password, name, email) {
         "password": password,
         "name": name,
         "email": email
-    }
+    }    
 }
 
 function createUser2(username, password, name, email) {

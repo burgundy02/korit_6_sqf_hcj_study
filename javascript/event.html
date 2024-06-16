@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <!-- this는 객체 중괄호안에 key, value-->
+<body>                     
+     <!-- 버튼을 눌렀을 때 이벤트가 발생, innerHTML이 테그안에 적는 거(확인) -->
+       <!--함수를 호출, click: 사용자가 HTML요소를 클릭할 때 이벤트 발생
+        keydown: 누르는 동안 이벤트 발생(누르고 있으면 계속 a가 뜬다) / keyup: 키에서 손을 떌 때/ keypress: 눌렀을 때--> 
     <button onclick="handleButtonClick(event);">확인</button>
-    <!-- 이벤트라는 함수를 호출해라, onkeydown키보드가 눌러졌을 때 이벤트가 동작을 한다, 누르고 있으면 계속 a가 뜨고있다, onkeyup 키보드를 땠을 때 뜬다. onkeypress-->
-    <input 
-    type="text" 
-    onkeydown="handleInputChange(event);"
-    onfocus="handleInputFocus(event);"
-    onblur="handleInputBlur(event);"
-    >
-   
-    <script src="event.js"></script>
 
+    <input type="text" onkeydown="handleInputChange(event);"  
+    
+    onfocus="handleInputFocus(event);"
+   
+    onblur="handlerInputBlur(event);">
+                              
+    <script src="event.js"></script>
 </body>
 </html>
+
+<!-- 인풋에 키보드를 치면 이벤트 발생 -> 넘어감 -->
+ 
+<!-- focus  폼 요소에 포커스가 놓였을 때, albel, select, textarea,button 태그에서 사용 -->
+  <!--blur폼 요소에 포커스를 잃었을 때 이벤트 발생  -->
